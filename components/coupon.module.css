@@ -1,0 +1,60 @@
+.couponContainer{
+    margin-inline: auto;
+    padding-inline: 20px;
+    margin-block: 20px;
+    width: calc(100% - 40px);
+    max-width: 480px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80px;
+    border-bottom: 1px solid black;
+}
+.coupon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: #cf3f45;
+    border-radius: 0 37px 0 0;
+    padding: 5px 14px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    transform: translateY(30px);
+    transition: transform 0.3s;
+}
+.coupon:hover{
+    transform: translateY(0);
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    
+    flex-direction: column;
+}
+.couponText{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+.couponCode{
+    color: white;
+    font-size: 11px;
+    text-align: left;
+}
+.circle{
+    flex: 0 0 auto;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #cf3f45;
+    text-align: center;
+}

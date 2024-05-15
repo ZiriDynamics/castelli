@@ -1,0 +1,310 @@
+.product{
+    background-color: #f8f8f8;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden; /* Clip content that overflows */
+}
+.heroContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.verticalContainer{
+    width: calc(100% - 10px);
+    height: 400px;
+    position: relative;
+    margin-inline: auto;
+}
+.heroImage {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 60px);
+    height: 370px;
+    object-fit: contain;
+    z-index: 6;
+}
+.circle{
+    width: min(400px, calc(100vw - 30px));
+    height: min(400px, calc(100vw - 30px));
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #e6e6e6;
+    z-index: 1;
+}
+.circleGradient{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px); /* 20px is the border width */
+    height: calc(100% - 10px);
+    background: #3ce877;
+    background: conic-gradient(from 0deg at 50% 50%, #3ce877 36deg, transparent 36deg, transparent 90deg, #3ce877 90deg);
+    border-radius: 50%;
+    z-index: 2;
+}
+.circleGradient::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4px); /* 2px is the border width */
+    height: calc(100% - 4px);
+    background: #e6e6e6;
+    border-radius: 50%;
+    z-index: 3;
+}
+.circleGradient::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 14px); /* 2px is the border width */
+    height: calc(100% - 14px);
+    background: #f8f8f8;
+    border-radius: 50%;
+    z-index: 4;
+}
+.percentage{
+    z-index: 10;
+    position: absolute;
+    top: -5%;
+    right: 0%;
+    font-size: 18px;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 4px;
+    width: 70px;
+}
+@media screen and (width > 440px){
+    .percentage{
+        border-radius: 0 10px 10px 0;
+    }
+    .percentage::before{
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: -2px;
+        width: 2px;
+        height: 63px;
+        background-color: black;
+    }
+    .percentage::after{
+        content: "";
+        position: absolute;
+        top: 63px;
+        left: -5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: black;
+    }
+}
+.percentage span{
+    color: #3ce877;
+}
+.percentageNumber{
+    font-size: 16px;
+}
+.percentageText{
+    font-size: 10px;
+}
+.salewa{
+    position: absolute; 
+    top: 0%;
+    left: 0%;
+    width: 70px;
+    height: 70px;
+}
+.certification{
+    position: absolute;
+    bottom: -15%;
+    right: 5%;
+    width: 240px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: white;
+    border-radius: 8px;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    z-index: 8;
+}
+.logo{
+    flex: 0 0 80px;
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    margin-top: 5px;
+    transform: scale(2);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    color: var(--ziri-blue-200);
+}
+.certText{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.certTitle{
+    font-size: 9px;
+}
+.certSubtitle{
+    font-size: 18px;
+}
+.dpp{
+    position: absolute;
+    bottom: -20%;
+    left: 5%;
+    width: 70px;
+    height: auto;
+}
+.productInfo{
+    background-color: white;
+    box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 50px 50px 0 0;
+}
+.logoContainer{
+    max-width: 260px;
+    height: 80px;
+    margin-inline: auto;
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+.logoContainerLogo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.productTitle{
+    color: var(--ziri-blue-200);
+    font-size: 23px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 20px;
+    padding-inline: 20px;
+}
+.productText{
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 12px;
+    padding-inline: 20px;
+}
+
+.productTable{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    padding-block: 20px;
+}
+.productTableRow{
+    display: grid;
+    grid-template-columns: 8fr 13fr;
+    width: calc(100% - 40px);
+    padding-inline: 10px;
+    gap: 10px;
+}
+.productTableKey{
+    font-size: 14px;
+    font-weight: 200;
+    text-align: right;
+    color: var(--ziri-blue-200);
+    padding-right: 10px;
+    border-right: 1px solid var(--ziri-blue);
+    padding-block: 5px;
+}
+.productTableValue{
+    margin-block: auto;
+    font-size: 14px;
+    font-weight: 200;
+}
+.bgIcon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    width: 70%;
+    height: auto;
+    color: var(--ziri-blue-200);
+    opacity: 0.1;
+    transition: transform 0.3s;
+}
+.bgIcon:hover{
+    transform: translate(50%, 50%) rotate(45deg);
+}
+.productHeading{
+    color: var(--ziri-blue-200);
+    font-size: 25px;
+    font-weight: 200;
+    text-align: left;
+    margin-top: 20px;
+    padding-inline: 20px;
+}
+.productParagraph{
+    font-size: 18px;
+    font-weight: 200;
+    text-align: left;
+    margin-top: 12px;
+    padding-inline: 20px;
+}
+.careInstructions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 2px;
+    box-sizing: border-box;
+}
+.careInstruction{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+.instructionIcon{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    color: var(--ziri-blue-200);
+}
+.careInstructionText{
+    font-size: 12px;
+    font-weight: 200;
+    padding-inline: 10px;
+    margin: auto;
+    margin-left: 0;
+}
+
+.productButton{
+    width: 90%;
+    margin-inline: 5%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 200;
+    background: #e83c43;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.productButton:hover{
+    background: #ab3135;
+}

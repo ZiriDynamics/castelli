@@ -1,0 +1,23 @@
+:root,
+html{
+    background: #ffffff;
+    --ziri-blue: #002a4b;
+    --ziri-blue-200: #276fa1;
+}
+
+body {
+    background: #ffffff;
+    background: linear-gradient(180deg, black, black);
+    margin: 0;
+    overflow-y: scroll;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%;
+    margin: auto;
+}

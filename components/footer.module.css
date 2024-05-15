@@ -1,0 +1,40 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    background: var(--ziri-blue);
+    color:white;
+    border-radius: 40px 40px 0 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-weight: 300;
+    font-size: 21px;
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+.list li{
+    cursor: pointer;
+    text-align: center;
+}
+.horizontal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: white;
+    color: var(--ziri-blue-200);
+    font-weight: 200;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+.horizontal p {
+    margin: none;
+    font-size: 13px;
+}
